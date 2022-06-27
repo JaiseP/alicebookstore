@@ -1,0 +1,173 @@
+.checkout-wrapper {
+    display: flex;
+    margin-top: 3%;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+
+    .billing-details {
+        width: 60%;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        h3 {
+            margin-bottom: 3%;
+            @include respond(phone) {
+                font-size: 2rem;
+            }
+        }
+
+        label {
+            @include respond(phone) {
+                font-size: 2rem;
+            }
+        }
+
+        input {
+
+            width: 96%;
+            @include respond(phone) {
+                font-size: 2rem;
+                padding: 2rem 1rem;
+                width: 100%;
+            }
+        }
+
+        .input-row {
+            display: flex;
+            width: 100%;
+            @include respond(phone) {
+                flex-direction: column;
+            }
+
+            .input-group__label {
+                width: 50%;
+                margin-right: 2%;
+
+                @include respond(phone) {
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+
+    .checkout-summary {
+        width: 40%;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        h3 {
+            @include respond(phone) {
+                font-size: 2rem;
+            }
+        }
+
+        &-wrapper {
+            background-color: #f0f0f0;
+            margin-top: 3%;
+            padding: 2rem;
+
+            .checkout-item {
+                display: flex;
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+
+                @include respond(phone) {
+                    font-size: 2rem;
+                }
+
+                .item-name {
+                    width: 90%;
+
+                    @include respond(phone) {
+                        width: 80%;
+                    }
+                }
+
+                .item-value {
+                    text-align: end;
+                }
+
+                .info {
+                    font-weight: bold;
+                }
+
+                .final-amount {
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    margin-top: 1rem;
+
+                    @include respond(phone) {
+                        font-size: 2.2rem;
+                        color: $color-theme-primary;
+                    }
+                }
+            }
+
+            .summary {
+                margin-top: 2rem;
+                padding-bottom: 1rem;
+                border-bottom: 0.2px solid #d6d6d6;
+            }
+
+            .payment-type {
+                margin-top: 2rem;
+                background-color: #fff;
+                padding: 2rem;
+                border-radius: 0.6rem;
+                @include respond(phone) {
+                    margin-top: 4rem;
+                }
+                p, label {
+                    font-size: 1.3rem;
+
+                    @include respond(phone) {
+                        font-size: 2rem;
+                    }
+                }
+
+                p {
+                    margin-bottom: 2rem;
+                    font-weight: 500;
+                }
+
+                .input-group {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 1rem;
+                }
+
+
+                label {
+                    margin-left: 1rem;
+
+                    img{
+                        pointer-events: none;
+                        width: 150px;
+
+                        @include respond(phone) {
+                            width: 150px;
+                        }
+                    }
+                }
+
+                button {
+                    margin-top: 2rem;
+                    width: 100%;
+
+                    @include respond(phone) {
+                        padding: 2rem 1rem;
+                        font-size: 2rem;
+                    }
+                }
+            }
+            
+        }
+    }
+} 

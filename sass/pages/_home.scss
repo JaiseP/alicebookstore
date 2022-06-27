@@ -1,0 +1,220 @@
+#categories {
+
+    h2 {
+        text-align: center;
+        margin-top: 2%;
+
+        @include respond(phone) {
+            margin-top: 5%;
+            font-size: 3rem;
+        }
+    }
+
+    .cat-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+
+        @include respond(phone) {
+            flex-wrap: wrap;
+        }
+    
+
+        .cat-item {
+            // background-color: #FCE4E1;
+            width: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 3%;
+            // border-radius: 50%;
+            transition: all .2s ease-in-out;
+            flex-direction: column; 
+            position: relative;
+            cursor: pointer;
+
+            @include respond(phone) {
+                width: 50%;
+                margin-bottom: 10rem;
+            }
+
+            .circle {
+                background-color: #FCE4E1;
+                border-radius: 50%;
+                width: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &:hover {
+
+                .circle {
+                background-color: #f2c3bd;
+                box-shadow: -1px 4px 8px -5px rgba(0,0,0,0.51);
+                -webkit-box-shadow: -1px 4px 8px -5px rgba(0,0,0,0.51);
+                -moz-box-shadow: -1px 4px 8px -5px rgba(0,0,0,0.51);
+                }
+
+                img {
+                    transform: scale(1.1);
+                }
+
+                h3 {
+                    color: $color-theme-primary;
+                }
+            }
+
+            img {
+                width: 100%;
+                transition: all .2s ease-in-out;
+            }
+
+            h3 {
+                margin-top: 5%;
+                position: absolute;
+                bottom: -28px;
+                transition: all .2s ease-in-out;
+                
+                @include respond(phone) {
+                    font-size: 2.5rem;
+                }
+            }
+        } 
+    }
+}
+
+#offers {
+    margin-top: 3%;
+    
+    h2 {
+        @include respond(phone) {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+    }
+    
+}
+
+
+.cta-banners {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+
+    img {
+        width: 49%;
+        
+        @include respond(tab-port) {
+            width: 100%;
+            margin-top: 2rem;
+        }
+    }
+}
+
+#why-us {
+    .section-bg-theme {
+        display: flex;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+
+        .why-us {
+            &__left {
+                width: 50%;
+                margin: 5% 0;
+
+                @include respond(tab-port) {
+                    width: 100%;
+                }
+
+                h2 {
+                    margin-bottom: 3%;
+
+                    @include respond(phone) {
+                        font-size: 3.2rem;
+                    }
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    letter-spacing: 1px;
+                    line-height: 2.2rem;
+                    text-align: justify;
+
+                    @include respond(phone) {
+                        font-size: 2.3rem;
+                        line-height: 3.2rem;
+                        letter-spacing: 0;
+                        font-weight: 200;
+                    }
+                }
+            }
+
+            &__right {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                margin-top: 3%;
+
+                @include respond(tab-port) {
+                    width: 100%;
+                    align-items: flex-start;
+                }
+
+                .why-us__item {
+                    display: flex;
+                    margin-bottom: 5%;
+
+                    img {
+                        width: 50px;
+                        height: 50px; 
+                        margin-right: 5%;
+
+                        @include respond(phone) {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+
+                    .icon-text {
+                        display: flex;
+                        flex-direction: column;
+
+                        h4 {
+                            font-size: 2rem;
+                            color: #fff;
+                            letter-spacing: 1px;
+                            margin-bottom: 2px;
+
+                            @include respond(phone) {
+                                font-size: 2.8rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 1.3rem;
+                            font-weight: 200;
+                            line-height: 3rem;
+
+                            @include respond(phone) {
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        h2, p {
+            color: #fff;
+        }
+
+    }
+}

@@ -1,0 +1,111 @@
+// Text Input
+
+.input-group {
+    &__label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4%;
+
+        
+
+        label {
+            font-size: 1.4rem;
+            color: $color-input-label;
+            letter-spacing: 1px;
+            margin-bottom: 1%;
+        }
+
+        input, textarea {
+            padding: 0.8rem 1rem;
+            border: 0.2px solid #cfcfcf;
+            background-color: $color-input-fill;
+            border-radius: $input-border-radius;
+            font-family: $primary-font;
+            letter-spacing: 1px;
+        }
+
+        .md-input {
+            width: 88%;
+        }
+    }
+} 
+
+.input-row {
+    display: flex;
+    width: 100%;
+    @include respond(phone) {
+        flex-direction: column;
+    }
+
+    .input-group__label {
+        width: 50%;
+
+        &:not(:last-child) {
+            margin-right: 2%;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+    
+}
+
+
+// Select Box
+select {
+    background-color: $color-input-fill;
+    border: 0.2px solid #cfcfcf;
+    padding: 2% 2%;
+    border-radius: $input-border-radius;
+    width: 100%;
+    font-family: $primary-font;
+}
+
+
+// Counter
+.counter-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 3%;
+
+    .counter {
+        padding: 1rem 1.3rem;
+        cursor: pointer;
+    }
+
+    .counter-minus {
+        background-color: #e6e6e6;
+        border-radius: $input-border-radius 0 0 $input-border-radius;
+    }
+
+    .counter-plus {
+        background-color: #cccccc;
+        border-radius: 0 $input-border-radius $input-border-radius 0;
+    }
+
+    .counter-qty {
+        padding: 0.63rem 2rem;
+        font-size: 1.5rem;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.input-error {
+    border-color: $color-theme-primary !important;
+}
+
+.error-label {
+    color: $color-theme-primary;
+    margin-top: .2rem;
+    opacity: 0;
+}
+
+.form-label, .register-form-label {
+    color: $color-theme-primary;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    display: none;
+}

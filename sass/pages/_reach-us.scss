@@ -1,0 +1,137 @@
+
+
+.call {
+    color: $color-theme-primary; 
+    font-size: 2rem !important;
+
+    @include respond(phone) {
+        font-size: 3rem !important;
+    }
+}
+
+.address-wrapper {
+    display: flex;
+
+    @include respond(phone) {
+        flex-direction: column;
+    }
+
+    .address {
+        margin-top: 3rem;
+        margin-right: 5rem;
+        p {
+            line-height: 12px !important;
+    
+            span {
+                font-weight: bold;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}
+
+.social-icons {
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+    img {
+        width: 25px !important;
+        filter: grayscale(0) !important;
+        margin-right: 1rem;
+    }
+}
+
+#contact-form {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+
+    @include respond(phone) {
+       justify-content: flex-start;
+    }
+
+    label {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        margin-bottom: 1%;
+    }
+
+    .form-wrapper {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+
+    input {
+        @include respond(phone) {
+            width: 100%;
+            padding: 1.5rem 1rem;
+        }
+    }
+
+    .input-group-row {
+        display: flex;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+
+        .input-group__label {
+            width: 50%;
+            padding-right: 2%;
+
+            @include respond(phone) {
+                width: 100%;
+            }
+        }
+    }
+
+    .input-group__label {
+        margin-bottom: 2rem;
+        width: 98%;
+    }
+
+    textarea {
+        width: 98%;
+        border: none;
+        border-radius: $input-border-radius;
+
+        
+
+        @include respond(phone) {
+            margin-top: 1rem;
+        }
+    }
+
+    h3 {
+        color: #fff;
+    }
+
+    label {
+        color: #fff;
+
+        @include respond(phone) {
+            font-size: 2rem !important;
+        }
+    }
+
+    button {
+        background-color: #fff;
+        width: fit-content;
+        padding: 1rem;
+        border-radius: $input-border-radius;
+        margin-top: 2rem;
+        font-family: $primary-font;
+        display: flex;
+        align-self: flex-end;
+        margin-right: 1rem;
+
+        @include respond(phone) {
+            padding: 2rem;
+            font-size: 2.2rem !important;
+        }
+    }
+}

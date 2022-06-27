@@ -1,0 +1,44 @@
+.success-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        margin-top: 5rem;
+        font-size: 3rem;
+        color: $color-theme-primary;
+
+        @include respond(phone) {
+            font-size: 4rem;
+        }
+    }
+
+    h3, a {
+        color: $color-theme-primary;
+        margin-top: 2rem;
+        cursor: pointer;
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+        text-align: center;
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+    }
+
+    button {
+        margin-top: 1rem;
+    }
+} 

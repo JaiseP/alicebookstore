@@ -1,0 +1,66 @@
+#why-us {
+    display: flex;
+    padding-top: 5rem;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 60%;
+        padding-right: 3rem;
+
+        @include respond(tab-port) {
+            width: 100%;
+            padding: 0;
+        }
+
+        h1 {
+            color: #2e2e2e;
+
+            @include respond(tab-port) {
+                font-size: 3rem;
+            }
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 2rem;
+            margin-top: 1rem;
+            color: #4d4d4d;
+            text-align: justify;
+
+            @include respond(phone) {
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+        }
+
+        .logo-grayscale {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 4rem;
+        }
+
+        img {
+            width: 180px;
+            filter: grayscale(80%);
+
+            @include respond(tab-port) {
+                filter: grayscale(0%);
+            }
+
+            &:hover {
+                filter: grayscale(0%);
+            }
+        }
+    }
+
+    .right {
+        width: 40%;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+}

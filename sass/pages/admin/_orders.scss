@@ -1,0 +1,158 @@
+.heading-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    select {
+        width: fit-content;
+        height: fit-content;
+        padding: 0;
+        border: 0.2px solid rgb(197, 197, 197);
+        background-color: #fff;
+        border-radius: 6rem;
+        padding: 0.5rem 2rem;
+        font-size: 1.3rem;
+    }
+}
+
+
+// Credits to below code: Dom, Code published in https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l on 20 July 2020
+// Accessed on 12 April 2022 for styling table
+
+.styled-table {
+    border-collapse: separate !important;;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 100%;
+
+    img {
+        width: 50px;
+    }
+}
+
+.styled-table thead tr {
+    background-color: #02233E;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #02233E;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+// Code from Dom ends here
+
+th {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+td {
+    font-size: 1.2rem;
+}
+
+.order-details-part {
+    display: flex;
+    .left {
+        width: 60%;
+
+        h3 {
+            margin-bottom: 1rem;
+            color: #3b3b3b;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    .right {
+        width: 40%;
+
+        select {
+            border: 0.2px solid rgb(194, 194, 194);
+        }
+
+        button {
+            width: 100%;
+            margin-top: 1rem;
+            background: none;
+            background-color: #EB534B;
+        }
+    }
+}
+
+.items-details {
+    margin-top: 2rem;
+
+    .item-container {
+        display: flex;
+        font-size: 1.4rem;
+        align-items: center;
+        margin-top: 1rem;
+
+        .left {
+            width: 90%;
+        }
+
+        .right {
+            width: 10%;
+        }
+
+        
+
+    }
+
+    .order-notes {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+        
+        span {
+            font-weight: 400;
+        }
+    }
+
+    .payment-mode {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+
+        span {
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        .cod {
+            background-color: #02233E;
+        }
+    }
+
+    
+}
+
+.strong {
+    font-weight: 600;
+}

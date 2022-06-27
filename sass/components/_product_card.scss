@@ -1,0 +1,146 @@
+// Product Card Style
+.product-card {
+    box-shadow: -1px 4px 8px -5px rgba(0,0,0,0.51);
+    -webkit-box-shadow: -1px 4px 8px -5px rgba(0,0,0,0.51);
+    -moz-box-shadow: -1px 4px 8px -5px rgba(0,0,0,0.51);
+    background-color: #fff;
+    padding: 1.5% 2%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: $input-border-radius;
+    border: 0.2px solid #f7f7f7;
+    position: relative;
+    transition: all 0.5s ease-in;
+
+    @include respond(tab-land) {
+        width: 33.33%;
+    }
+
+    @include respond(tab-port) {
+        width: 50%;
+    }
+
+
+    &:hover {
+        box-shadow: 5px 8px 12px -10px rgba(0,0,0,0.51);
+        -webkit-box-shadow: 5px 8px 12px -10px rgba(0,0,0,0.51);
+        -moz-box-shadow: 5px 8px 12px -10px rgba(0,0,0,0.51);
+
+        img {
+            transform: scale(1.05);
+        }
+    }
+
+    img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .product-title {
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin: 8% 0 3% 0;
+
+        @include respond(phone) {
+            font-size: 2.4rem;
+        }
+        
+        a {
+            &:hover {
+                color: $color-theme-primary;
+            }
+        }
+        
+    }
+
+    .star-rating {
+        margin-bottom: 5%;
+        display: flex;
+
+        .fa-star {
+            color: #f2aa00;
+            font-size: 1.2rem;
+
+            @include respond(phone) {
+                font-size: 1.8rem;
+            }
+        }
+
+        p {
+            margin-left: 5%;
+
+            @include respond(phone) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .final-price {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 5%;
+
+        @include respond(phone) {
+            font-size: 2.3rem;
+        }
+
+        .original-price {
+            color: #595959;
+            font-weight: 500;
+            margin-left: 10%;
+            text-decoration: line-through;
+        }
+    }
+
+    button {
+        background: linear-gradient(to right, $color-theme-primary, $color-theme-secondary);
+        border: none;
+        padding: 5% 25%;
+        color: #fff;
+        border-radius: $input-border-radius;
+        cursor: pointer;
+        transition: all 1s ease-in-out;
+        box-shadow: -1px 4px 8px -5px rgba(0,0,0,0.51);
+        -webkit-box-shadow: -1px 4px 8px -5px rgba(0,0,0,0.51);
+        -moz-box-shadow: -1px 4px 8px -5px rgba(0,0,0,0.51);
+
+        &:hover {
+            background: linear-gradient(to left, $color-theme-primary, $color-theme-secondary);
+        }
+    }
+
+    .offer-tag {
+        background-color: #27BB79;
+        position: absolute;
+        color: #fff;
+        top: 0;
+        right: 0;
+        margin-top: 5%;
+        margin-right: 5%;
+        padding: 3% 5%;
+        border-radius: 15px;
+        z-index: 20;
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+    }
+
+    .fa-heart {
+        color: $color-theme-primary;
+        font-size: 2rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 8%;
+        margin-left: 8%;
+        z-index: 21;
+
+        @include respond(phone) {
+            font-size: 3rem;
+        }
+    }
+}

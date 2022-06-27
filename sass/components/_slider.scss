@@ -1,0 +1,76 @@
+// BANNER SLIDER
+
+.banner-slider {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+}
+
+.banner-slider .slick-next {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    right: 0;
+    position: absolute;
+    top: 50%;
+    margin-right: 3%;
+    font-size: 3rem;
+}
+
+.banner-slider .slick-prev {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    margin-left: 3%;
+    font-size: 3rem;
+}
+
+.banner-slider .slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    margin-bottom: 1%;
+
+    li {
+        margin: 0 1%;
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+}
+
+.banner-slider .slick-dots li.slick-active {
+    background: $color-theme-secondary !important;
+}
+
+.banner-slider .slick-dots li {
+    list-style: none;
+    width: 15px;
+    height: 15px;
+    background: gray;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.banner-slider .slick-dots li.slick-active {
+    background: #000;
+}
+
+.banner-slider .slick-dots li button {
+    display: none;
+} 

@@ -1,0 +1,24 @@
+// Theme Colors
+$color-theme-primary: #ED5B47;
+$color-theme-secondary: #DD2160;
+$color-theme-gradient: linear-gradient(to left, $color-theme-primary, $color-theme-secondary);
+
+// Dark Colors
+$color-dark-teritary: #333333;
+
+// Inputs
+$color-input-fill: #fcfcfc;
+$color-input-label: #5c5b5b;
+
+// Border Radius
+$input-border-radius: 0.5rem; 
+
+// Fonts
+$primary-font: 'Fira Sans', sans-serif;
+
+
+// Order Status Colors
+$new-order: #2DB556;
+$processing-order: #2D9EB5;
+$completed-order: #B52D68;
+$cancelled-order: #F24141;

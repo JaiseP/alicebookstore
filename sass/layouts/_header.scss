@@ -1,0 +1,249 @@
+// PAGE HEADER CSS
+
+.header {
+    box-shadow: -1px 4px 8px -5px rgba(0,0,0,0.51);
+    -webkit-box-shadow: -1px 4px 8px -5px rgba(0,0,0,0.51);
+    -moz-box-shadow: -1px 4px 8px -5px rgba(0,0,0,0.51);
+    z-index: 1000;
+    background-color: #fff;
+
+    
+    @include respond(tab-port) {
+        display: none;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 0.5px solid #e3e3e3;
+
+        p {
+            letter-spacing: 1px;
+        }
+
+        &-contact {
+            display: flex;
+
+            &-item {
+                display: flex;
+
+                i {
+                    font-size: 1rem;
+                    margin-right: 0.5rem;
+                    color: $color-dark-teritary;
+                }
+
+                p {
+                    color: $color-dark-teritary;
+                    letter-spacing: 1px;
+                }
+
+                &:first-child {
+                    margin-right: 2.5rem;
+                }
+            }
+
+        }
+
+
+    }
+
+    &__main {
+        display: flex;
+        padding-top: 0.3rem;
+
+
+        &-logo {
+            flex: 10%;
+            img {
+                width: 20rem;
+            }
+        }
+
+        &-search {
+            display: flex;
+            flex: 60%;
+            justify-content: center;
+            align-items: center;
+
+            &-input {
+                height: 4.5rem;
+                width: 80%;
+
+                input {
+                    height: 100%;
+                    width: 100%;
+                    background-color: $color-input-fill;
+                    border-width: 0;
+                    padding: 1rem;
+                    border-top-left-radius: $input-border-radius;
+                    border-bottom-left-radius: $input-border-radius;
+                    font-family: 'Fira Sans', sans-serif;
+                }
+
+            }
+
+            &-icon {
+                height: 4.5rem;
+                width: 5%;
+                background-color: $color-input-fill;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-top-right-radius: $input-border-radius;
+                border-bottom-right-radius: $input-border-radius;
+
+                i {
+                    font-size: 1.5rem;
+                    color: #707070;
+                }
+            }
+
+
+
+        }
+
+        &-options {
+            flex: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-item { 
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                
+
+                a {
+                    display: flex;
+                }
+                
+                &:first-child {
+                    margin-right: 10%;
+                }
+
+                i {
+                    font-size: 2.5rem;
+                    margin-right: 1rem;
+                }
+
+                p {
+                    font-size: 1.3rem;
+                }
+
+                .bag {
+                    display: flex;
+                    position: relative;
+                    
+                    p {
+                        position: absolute;
+                        background-color: red;
+                        width: 15px;
+                        height: 15px;
+                        left: 18px;
+                        text-align: center;
+                        border-radius: 50%;
+                        font-size: 1.1rem;
+                        color: #fff;
+                        vertical-align: middle;
+                    }
+                }
+
+                img {
+                    margin-right: 1rem;
+                    width: auto;
+                    height: 30px;
+                }
+            }
+
+        }
+    }
+
+    &__menu {
+        background: linear-gradient(to left, $color-theme-primary, $color-theme-secondary);
+        padding: 0.8rem 2rem;
+
+        &-nav {
+            display: flex;
+
+            li {
+                list-style: none;
+                margin-right: 4rem;
+                font-size: 1.3rem;
+                cursor: pointer;
+
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+.header-mobile {
+    display: none;
+    box-shadow: -1px 4px 8px -5px rgba(0,0,0,0.51);
+    -webkit-box-shadow: -1px 4px 8px -5px rgba(0,0,0,0.51);
+    -moz-box-shadow: -1px 4px 8px -5px rgba(0,0,0,0.51);
+    z-index: 1000;
+    padding: 1.5rem 0;
+    background-color: #fff;
+
+    @include respond(tab-port) {
+        display: flex;
+    }
+
+    i {
+        font-size: 2rem;
+
+        @include respond(phone) {
+            font-size: 3rem;
+        }
+    }
+
+    .menu {
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 2%;
+    }
+
+
+    .logo {
+        width: 80%;
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+
+        a {
+            display: flex;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+
+        img {
+            width: 30%;
+            margin-right: 3%;
+
+            @include respond(phone) {
+                width: 60%;
+            }
+        }
+    }
+
+    .search {
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 2%;
+    }
+}
+
+
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice Bookstore | Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/854e356633.js" crossorigin="anonymous"></script>
+</head>
+<body class="admin-body">
+    <div class="wrapper">
+        <aside>
+            <div class="logo-wrapper">
+                <img src="../assets/images/logo-white.png" alt="Alice Bookstore Logo">
+            </div>
+            <ul>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./orders.html">Orders</a></li>
+                <li class="sub-menu"><a>Inventory</a></li>
+                <div class="panel open">
+                    <p class="link-active"><a href="./categories.html">Categories</a></p>
+                    <p><a href="./products.html">Products</a></p>
+                </div>
+                <li class="sub-menu"><a>Users</a></li>
+                <div class="panel">
+                    <p>Office Users</p>
+                    <p>Store Workers</p>
+                </div>
+                <li class="sub-menu"><a>Promotions</a></li>
+                <div class="panel">
+                    <p>Coupon Codes</p>
+                    <p>Company Discount</p>
+                </div>
+                <li class="sub-menu"><a>Logout</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div class="admin-header container">
+                <h4>Welcome John</h4>
+                <div class="logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <p>Logout</p>
+                </div>
+            </div>
+            <div class="container">
+               <div class="heading-wrapper">
+                   <h3>All Categories</h3>
+                   <!-- <select name="order-filter" id="order-filter">
+                    <option value="all">All Orders</option>
+                    <option value="processing">Processing</option>
+                    <option value="completed">Completed</option>
+                    <option value="cancelled">Cancelled</option>
+                  </select> -->
+               </div>
+
+               <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Category Id</th>
+                            <th>Category Name</th>
+                            <th>Image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-toggle="modal" data-target="#editCategoryModal">
+                            <td>2342</td>
+                            <td>Books</td>
+                            <td><img src="../assets/images/books-1.png" alt=""></td>
+                        </tr>
+                        <tr data-toggle="modal" data-target="#editCategoryModal">
+                            <td>2342</td>
+                            <td>Books</td>
+                            <td><img src="../assets/images/books-1.png" alt=""></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="add-new" data-toggle="modal" data-target="#addCategoryModal">
+                <p>+</p>
+            </div>
+
+            <!-- Edit Category Modal -->
+            <div id="editCategoryModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Edit Category</h3>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group__label">
+                            <label>Category Name</label>
+                            <input type="text" value="Books">
+                        </div>
+                        <div class="input-group__label">
+                            <label>Category Image</label>
+                            <img src="../assets/images/books-1.png" alt="">
+                            <input type="file" id="myFile" name="filename">
+                        </div>
+                        <div class="button-container">
+                            <button class="danger">Delete</button>
+                            <button class="primary">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Add Category Modal -->
+             <div id="addCategoryModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Add Category</h3>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group__label">
+                            <label>Category Name</label>
+                            <input type="text" placeholder="Enter Category Name">
+                        </div>
+                        <div class="input-group__label">
+                            <label>Category Image</label>
+                            <!-- <img src="../assets/images/books-1.png" alt=""> -->
+                            <input type="file" id="myFile" name="filename">
+                        </div>
+                        <div class="button-container">
+                            <!-- <button class="danger">Delete</button> -->
+                            <button class="primary">Add Category</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </main>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>

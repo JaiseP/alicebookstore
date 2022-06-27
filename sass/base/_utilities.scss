@@ -1,0 +1,38 @@
+.fixed {
+    position: fixed;
+    top:0; left:0;
+    width: 100%; 
+}
+
+// Breadcrumb
+.breadcrumbs {
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+    li {
+        font-size: 1.2rem;
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+        
+        &:not(:last-child) {
+            margin-right: 0.5%;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    span {
+        margin-right: 0.5%;
+        font-size: 1.3rem;
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+    }
+}
+
